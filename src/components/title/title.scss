@@ -1,0 +1,56 @@
+.title {
+  position: relative;
+  display: inline-block;
+  font-size: 63px;
+  line-height: 1.0;
+  font-family: "Bernier";
+  text-align: center;
+  color: $grey2;
+
+  @include tablet {
+    font-size: 49px;
+  }
+
+  @include phone {
+    font-size: 35px;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 5px;
+    background-color: rgba($grey2, 0.2);
+    content: "";
+  }
+
+  &:before {
+    left: -40px;
+  }
+
+  &:after {
+    right: -40px;
+  }
+
+  &--subtitle {
+    font-size: 35px;
+    line-height: 1.2;
+    color: $grey1;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include phone {
+      font-size: 21px;
+    }
+  }
+
+  &--subtitle-contacts {
+    font-size: 35px;
+    line-height: 1.2;
+    color: $grey1;
+  }
+}

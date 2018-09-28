@@ -1,0 +1,14 @@
+.auth-card#auth-card
+  .auth-card__container
+    .auth-card__side
+      .auth-card__info-block
+        .auth-card__person
+          +person("person")
+        .auth-card__socials
+          +socials("socials socials--auth-card")
+      nav.auth-card__buttons-block
+        a.auth-card__button(href="works.html") Мои работы
+        a.auth-card__button(href="about.html") Обо мне
+        a.auth-card__button(href="blog.html") Блог
+    #auth-component
+    include auth-card-form.pug

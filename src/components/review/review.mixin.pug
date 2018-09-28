@@ -1,0 +1,9 @@
+mixin review(reviewText, reviewAvatar, reviewName, reviewAdd)
+  .review
+    .review__text #{reviewText}
+    .review__author
+      .review__author-avatar
+        +image(`${reviewAvatar}`, "Автор отзыва", "review__author-img")
+      .review__author-data
+        .review__author-name #{reviewName}
+        .review__author-desc #{reviewAdd}

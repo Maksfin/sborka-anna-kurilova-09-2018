@@ -1,0 +1,51 @@
+.person {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__avatar {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+
+    @include phone {
+      font-size: 21px;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.0;
+    text-align: center;
+
+    @include phone {
+      font-size: 14px;
+    }
+  }
+
+  &--header {
+    .person__name {
+      font-size: 35px;
+      color: $white;
+
+      @include phone {
+        font-size: 22px;
+      }
+    }
+
+    .person__desc {
+      font-weight: 300;
+      color: rgba($white, 0.8);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.socials {
+  display: flex;
+
+  &__link {
+    width: 60px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition-property: background-color, background-image, opacity;
+    transition-duration: 0.25s;
+
+    &:hover {
+      opacity: 1.0;
+    }
+
+    &--vk {
+      background-image: svg-load("socials_vk.svg", fill=$white);
+    }
+
+    &--gh {
+      background-image: svg-load("socials_gh.svg", fill=$white);
+    }
+
+    &--in {
+      background-image: svg-load("socials_in.svg", fill=$white);
+    }
+  }
+
+  &--auth-card {
+    .socials__link {
+      &--vk {
+        background-image: svg-load("socials_vk.svg", fill=$green1);
+      }
+
+      &--gh {
+        background-image: svg-load("socials_gh.svg", fill=$green1);
+      }
+
+      &--in {
+        background-image: svg-load("socials_in.svg", fill=$green1);
+      }
+    }
+  }
+
+  &--footer {
+    .socials__link {
+      width: 35px;
+      height: 35px;
+      margin-left: 10px;
+      border: 1px solid rgba($white, 0.5);
+      border-radius: 50%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        background-color: $white;
+      }
+
+      &--vk {
+        background-size: 65%;
+
+        &:hover {
+          background-image: svg-load("socials_vk.svg", fill=rgba($grey2, 0.85));
+        }
+      }
+
+      &--gh {
+        background-size: 60%;
+
+        &:hover {
+          background-image: svg-load("socials_gh.svg", fill=rgba($grey2, 0.85));
+        }
+      }
+
+      &--in {
+        background-size: 55%;
+
+        &:hover {
+          background-image: svg-load("socials_in.svg", fill=rgba($grey2, 0.85));
+        }
+      }
+    }
+  }
+}

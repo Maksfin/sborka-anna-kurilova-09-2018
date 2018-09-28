@@ -1,0 +1,47 @@
+.review {
+  max-width: 400px;
+  margin: 10px;
+  padding: 35px 10px 10px 10px;
+  background-color: rgba($white, 0.8);
+  background-image: svg-load("quotes.svg", fill=rgba($black, 0.1));
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  border-radius: 5px;
+
+  @include phone {
+    background-position: center 10px;
+  }
+
+  &__text {
+    margin: 20px 0;
+  }
+
+  &__author {
+    display: flex;
+  }
+
+  &__author-avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include phone {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__author-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $green1;
+  }
+
+  &__author-name {
+    font-weight: 500;
+  }
+}

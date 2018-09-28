@@ -1,0 +1,10 @@
+mixin image(imagePath, imageAlt, imageClass)
+  img(src=`images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin icon(iconName, iconClass)
+  svg(class=`${iconClass}`)
+    use(xlink:href=`images/icons/sprite.svg#${iconName}`)
+
+include ../components/socials/socials.mixin.pug
+include ../components/person/person.mixin.pug
+include ../components/review/review.mixin.pug

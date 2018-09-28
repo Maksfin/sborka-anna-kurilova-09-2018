@@ -1,0 +1,131 @@
+.blog {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 3.5vw;
+
+  @include tablet {
+    padding: 50px 20px;
+    font-size: 14px;
+  }
+
+  @include phone {
+    padding: 30px 10px;
+  }
+
+  &__aside {
+    width: 17.5%;
+    min-width: 200px;
+    margin-right: 30px;
+  }
+
+  &__block-headlines {
+    text-align: right;
+
+    @include tablet {
+      display: none;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 80px;
+      width: 17.5%;
+      min-width: 200px;
+    }
+  }
+
+  &__anchor {
+    padding: 10px;
+    border-right: 3px solid transparent;
+    transition-property: color;
+    transition-duration: 0.25s;
+
+    &:hover {
+      color: $green1;
+    }
+
+    &.active {
+      font-weight: 500;
+      color: $green1;
+      border-right: 3px solid $green1;
+    }
+  }
+
+  &__block-content {
+    width: 60%;
+    padding-right: 50px;
+   
+
+    @include laptop {
+      width: 75%;
+    }
+
+    @include tablet {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__article {
+    &:after {
+      display: block;
+      width: 80%;
+      height: 5px;
+      margin: 50px 0;
+      background-color: rgba($grey2, 0.06);
+      content: "";
+
+      @include laptop {
+        width: 100%;
+      }
+
+      @include phone {
+        margin: 20px 0;
+      }
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__article-title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Bernier";
+
+    @include tablet {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    @include phone {
+      font-size: 21px;
+    }
+  }
+
+  &__article-time {
+    display: block;
+    margin-bottom: 20px;
+    color: $green1;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__article-text p {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__block-empty {
+    width: 12.5%;
+
+    @include laptop {
+      display: none;
+    }
+  }
+}

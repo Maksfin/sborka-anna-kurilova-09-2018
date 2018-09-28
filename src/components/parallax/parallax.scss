@@ -1,0 +1,92 @@
+.parallax {
+  position: absolute;
+  z-index: -10;
+  width: 110%;
+  height: 100%;
+
+  &__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    background-size: cover;
+    border-width: 0;
+
+    &--one {
+      background-image: url("images/parallax/parallax-layer-optimized-1.png");
+    }
+
+    &--two {
+      bottom: calc(-25% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-2.png");
+    }
+
+    &--three {
+      bottom: calc(-30% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-3.png");
+    }
+
+    &--four {
+      bottom: calc(55% - $parallax-delta);
+      left: 65%;
+      width: 15%;
+      height: 15%;
+      background-image: url("images/parallax/parallax-layer-optimized-4.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--five {
+      bottom: calc(-20% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-5.png");
+    }
+
+    &--six {
+      bottom: calc(-35% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-6.png");
+    }
+
+    &--seven {
+      bottom: calc(30% - $parallax-delta);
+      left: 25%;
+      width: 20%;
+      height: 20%;
+      background-image: url("images/parallax/parallax-layer-optimized-7.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--eight {
+      bottom: calc(-60% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-8.png");
+    }
+
+    &--nine {
+      bottom: calc(-35% - $parallax-delta);
+      background-image: url("images/parallax/parallax-layer-optimized-9.png");
+    }
+
+    &--ten {
+      bottom: -40%;
+      width: 75%;
+      height: 75%;
+      background-image: url("images/parallax/parallax-layer-optimized-10.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      animation: cloud 140s linear infinite;
+    }
+  }
+}
+
+@keyframes cloud {
+	0% {
+    left: 105%;
+  }
+  
+	100% {
+		left: -100%;
+	}
+}

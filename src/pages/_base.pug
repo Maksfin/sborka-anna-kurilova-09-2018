@@ -1,0 +1,27 @@
+
+include _mixins.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{title} | Portfolio
+    link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="main.min.css")
+  body
+    //- include ../components/preloader/preloader.pug
+    .wrapper.wrapper--hidden#wrapper
+      if title == "Добро пожаловать!"
+        block content
+      else
+        include ../components/hamburger/hamburger.pug
+        include ../components/header/header.pug
+        main.maincontent
+          block content
+        include ../components/footer/footer.pug
+
+    block scripts

@@ -1,0 +1,15 @@
+extends ../_base.pug
+
+block variables
+  - var title = "Добро пожаловать"
+
+block content
+    section.welcome
+      header.welcome__header
+        include ../../components/auth-button/auth-button.pug
+      main.welcome__main
+        include ../../components/auth-card/auth-card.pug
+      footer.welcome__footer © Анна Курилова | создано с любовью в LoftSchool | 2018
+
+block scripts
+  script(src="welcome.bundle.js")

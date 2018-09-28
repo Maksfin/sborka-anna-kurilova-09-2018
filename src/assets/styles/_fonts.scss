@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
+
+@font-face {
+  font-family: "Bernier";
+  src: url("/assets/fonts/BernierWebfont.woff2") format("woff2"),
+       url("/assets/fonts/BernierWebfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

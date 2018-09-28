@@ -58,9 +58,14 @@ gulp.task("scripts", () => {
 //рендерим странички
 gulp.task("pug", () => {
   return gulp
-    .src(`${config.VIEWS_DIR}/pages/*.pug`)
+    .src([
+      `${config.VIEWS_DIR}/about/about.pug`,
+      `${config.VIEWS_DIR}/blog/blog.pug`,
+      `${config.VIEWS_DIR}/welcome/welcome.pug`,
+      `${config.VIEWS_DIR}/works/works.pug`
+    ])
     .pipe($gp.plumber())
-    .pipe($gp.pug())
+    .pipe($gp.pug({ pretty: true }))
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -124,11 +129,16 @@ gulp.task("images", () => {
 
 // галповский вотчер
 gulp.task("watch", () => {
-  gulp.watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
-  gulp.watch(`${config.SRC_DIR}/images/**/*.*`, gulp.series("images"));
-  gulp.watch(`${config.SRC_DIR}/scripts/**/*.js`, gulp.series("scripts"));
+  gulp.watch(`src/components/**/*.pug`, gulp.series("pug"));
+  gulp.watch(`src/components/**/*.scss`, gulp.series("styles"));
+  gulp.watch(`src/components/**/*.js`, gulp.series("scripts"));
+  gulp.watch(`src/components/**/*.json`, gulp.series("scripts"));
   gulp.watch(`${config.SRC_DIR}/fonts/*`, gulp.series("fonts"));
-  gulp.watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
+  gulp.watch(`${config.SRC_DIR}/images/**/*.*`, gulp.series("images"));
+  gulp.watch(`src/pages/**/*.pug`, gulp.series("pug"));
+  gulp.watch(`src/pages/**/*.scss`, gulp.series("styles"));
+  gulp.watch(`src/pages/**/*.js`, gulp.series("scripts"));
+  gulp.watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
 });
 
 // GULP:DEV

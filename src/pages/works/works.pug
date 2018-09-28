@@ -1,0 +1,21 @@
+extends ../_base.pug
+
+block variables
+  - var title = "Мои работы"
+
+block content
+  section.works
+    .works__title
+      .title Мои работы
+    .works__slider
+      #slider-component
+      //- include ../../components/slider/slider.pug
+  section.reviews
+    .reviews__title
+      .title Что обо мне говорят
+    .reviews__reviews
+      +review("Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!", "reviews/reviews-kovalchuk.jpg", "Ковальчук Дмитрий", "основатель LoftSchool")
+      +review("Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!", "reviews/reviews-sabancev.jpg", "Сабанцев Владимир", "преподаватель")
+    .reviews__contact-form
+      include ../../components/contact-form/contact-form.pug
+

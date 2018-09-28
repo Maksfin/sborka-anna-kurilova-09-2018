@@ -1,9 +1,21 @@
 {
-  "white": "#efeee9",
-  "beige": "#eeebdf",
-  "green": "#16c2aa",
-  "text-color": "#455a64",
-  "grey": "#373e42",
-  "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "white": "#ffffff",
+
+  "beige1": "#efeee9",
+  "beige2": "#eeebdf",
+  "beige3": "#faf8f0",
+  "beige4": "#f0efe9",
+  "beige5": "#efebe0",
+
+  "grey1": "#455a64",
+  "grey2": "#373e42",
+
+  "green1": "#00bfa5",
+  "green2": "#009688",
+
+  "black": "#000000",
+
+  "filter-header": "rgba(#016672, 0.3)",
+
+  "parallax-delta": "5%"
 }

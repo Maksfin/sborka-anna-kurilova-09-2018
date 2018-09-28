@@ -1,0 +1,6 @@
+mixin person(personClass)
+  div(class=`${personClass}`)
+    .person__avatar
+      +image("assets/person.jpg", "фото", "person__avatar-img")
+    .person__name Анна Курилова
+    .person__desc Личный сайт веб-разработчика

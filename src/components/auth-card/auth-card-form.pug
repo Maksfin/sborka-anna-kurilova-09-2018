@@ -1,0 +1,31 @@
+script#auth-form(type="text/x-template")
+  form.auth-card__side.auth-card__side--back
+    .auth-card__info-block
+      .auth-card__title
+        h2.title.title--subtitle Авторизуйтесь
+      .auth-card__form
+        .auth-card__form-row
+          input.auth-card__input(type="text" name="login" placeholder="Логин" v-model="user.name")
+          .auth-card__row-icon.auth-card__row-icon--login
+        .auth-card__form-row
+          input.auth-card__input(type="password" name="pass" placeholder="Пароль" v-model="user.password")
+          .auth-card__row-icon.auth-card__row-icon--password
+        .auth-card__form-row
+          label.auth-card__label
+            input.auth-card__checkbox(type="checkbox" value="yes")
+            .auth-card__checkbox-visible
+            .auth-card__checkbox-title Я человек
+        .auth-card__form-row.auth-card__form-row--radio
+          .auth-card__radio-question Вы точно не робот?
+          .auth-card__radio-buttons
+            label.auth-card__label.auth-card__label--radio
+              input.auth-card__radio(type="radio" name="value" value="yes")
+              .auth-card__radio-visible
+              .auth-card__radio-value Да
+            label.auth-card__label.auth-card__label--radio
+              input.auth-card__radio(type="radio" name="value" value="no")
+              .auth-card__radio-visible
+              .auth-card__radio-value Не уверен
+    .auth-card__buttons-block
+      button.auth-card__button.auth-card__button--back#auth-card-button-welcome(type="button") На главную
+      button.auth-card__button.auth-card__button--back(@click="login" type="button") Войти

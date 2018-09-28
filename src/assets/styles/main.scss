@@ -1,4 +1,8 @@
-@import 'normalize.css';
-@import './layout/fonts.scss';
-@import './layout/base.scss';
-@import './blocks/*.scss';
+@import "normalize.css";
+
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "_base.scss";
+
+@import "../../components/**/*.scss";
+@import "../../pages/**/*.scss";

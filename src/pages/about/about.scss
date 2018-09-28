@@ -1,0 +1,147 @@
+.about {
+  position: relative;
+  display: flex;
+
+  @include tablet {
+    display: block;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: -10;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, $beige1 50%, $beige2 0);
+    content: "";
+
+    @include tablet {
+      background-image: linear-gradient(90deg, $beige1 50%, $beige1 0);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 30px 30px 50px;
+
+    @include laptop {
+      justify-content: flex-start;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include phone {
+      padding: 30px 10px;
+    }
+
+    &--person-info {
+      flex-direction: row;
+      align-items: flex-start;
+      background-color: $beige1;
+
+      @include laptop {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &--skills {
+      background-color: $beige2;
+    }
+  }
+
+  &__subblock {
+    width: calc(50% - 15px);
+
+    @include laptop {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 40px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    width: 250px;
+    margin-bottom: 30px;
+
+    @include tablet {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    @include phone {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 30px;
+
+    @include tablet {
+      max-width: 480px;
+    }
+
+    @include phone {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__desc p {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__skills {
+    width: 100%;
+  }
+}
+
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/map.jpg) center center / cover no-repeat;
+
+  &__map {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+
+    @include phone {
+      position: static;
+    }
+  }
+
+  &__contacts-card {
+    position: absolute;
+    z-index: 10;
+
+    @include phone {
+      position: static;
+    }
+  }
+}

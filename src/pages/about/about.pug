@@ -1,0 +1,28 @@
+extends ../_base.pug
+
+block variables
+  - var title = "Обо мне"
+
+block content
+  section.about
+    .about__block.about__block--person-info
+      .about__subblock
+        h1.title Обо мне
+      .about__subblock
+        include ../../components/person-info/person-info.pug
+    .about__block.about__block--skills
+      .about__title
+        h2.title.title--subtitle Чем я могу быть вам полезна
+      .about__desc
+        p Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__skills
+        #skills-component
+        //- include ../../components/skills/skills.pug
+  section.contacts
+    .contacts__contacts-card
+      include ../../components/contacts-card/contacts-card.pug
+    .contacts__map
+      include ../../components/map/map.pug
+
+
+ 
